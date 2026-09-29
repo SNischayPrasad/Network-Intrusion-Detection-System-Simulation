@@ -1,0 +1,2 @@
+# Optional developer tools (not needed to run the project)
+playwright>=1.45   # scripts/capture_screenshots.py — uses your installed Edge/Chrome
