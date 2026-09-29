@@ -16,7 +16,7 @@ All numbers below come from this repository's own measured results. Re-check the
 ### C. LinkedIn project post
 > 🛡️ **Project: Network Intrusion Detection System (IDS) Simulation**
 >
-> I built a hybrid network IDS from scratch to understand how Security Operations Centres detect and investigate suspicious traffic, using 100% synthetic data and documentation-only IP ranges.
+> I built a hybrid network IDS simulation to understand how Security Operations Centres detect and investigate suspicious traffic, using 100% synthetic data and documentation-only IP ranges.
 >
 > **What it does**
 > 🔹 Generates 6,000+ labelled network flows (normal web/DNS/SSH/DB traffic plus patterns like repeated failed logins, port-probing bursts and SYN-heavy traffic)

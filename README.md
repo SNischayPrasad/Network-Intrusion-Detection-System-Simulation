@@ -305,7 +305,7 @@ Interactive docs are at `http://127.0.0.1:8000/docs`. Full reference (request, r
 Prerequisites: **Python 3.11+**, **Node.js 18+**, Git.
 
 ```bash
-git clone https://github.com/<your-username>/Network-Intrusion-Detection-System-Simulation.git
+git clone https://github.com/SNischayPrasad/Network-Intrusion-Detection-System-Simulation.git
 cd Network-Intrusion-Detection-System-Simulation
 
 python -m venv .venv
@@ -458,7 +458,7 @@ This project is designed exclusively for **defensive cybersecurity education**. 
 ## Author
 
 **Nischay** — Cybersecurity student
-GitHub: `https://github.com/<your-username>` · LinkedIn: `https://www.linkedin.com/in/<your-profile>`
+GitHub: [SNischayPrasad](https://github.com/SNischayPrasad) · LinkedIn: `https://www.linkedin.com/in/<your-profile>`
 
 Released under the [MIT License](LICENSE).
 
