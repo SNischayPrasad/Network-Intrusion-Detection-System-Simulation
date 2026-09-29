@@ -1,0 +1,223 @@
+{
+  "metadata": {
+    "trained_at": "2026-09-29 04:40 UTC",
+    "rows": 6019,
+    "suspicious_rows": 1099,
+    "test_rows": 1505,
+    "test_size": 0.25,
+    "baseline_samples": 3690,
+    "features": [
+      "packet_count",
+      "byte_count",
+      "duration",
+      "bytes_per_second",
+      "packets_per_second",
+      "connection_count",
+      "failed_connection_count",
+      "syn_count",
+      "rst_count",
+      "average_packet_size"
+    ],
+    "sklearn_version": "1.9.1"
+  },
+  "ml_models": {
+    "Logistic Regression": {
+      "accuracy": 0.9515,
+      "precision": 0.8117,
+      "recall": 0.9564,
+      "f1": 0.8781,
+      "false_positive_rate": 0.0496,
+      "confusion_matrix": {
+        "tn": 1169,
+        "fp": 61,
+        "fn": 12,
+        "tp": 263
+      },
+      "support": {
+        "normal": 1230,
+        "suspicious": 275
+      },
+      "roc_auc": 0.9846
+    },
+    "Random Forest": {
+      "accuracy": 0.9674,
+      "precision": 0.8645,
+      "recall": 0.9745,
+      "f1": 0.9162,
+      "false_positive_rate": 0.0341,
+      "confusion_matrix": {
+        "tn": 1188,
+        "fp": 42,
+        "fn": 7,
+        "tp": 268
+      },
+      "support": {
+        "normal": 1230,
+        "suspicious": 275
+      },
+      "roc_auc": 0.9959
+    },
+    "Isolation Forest (unsupervised)": {
+      "accuracy": 0.8658,
+      "precision": 0.5788,
+      "recall": 0.9745,
+      "f1": 0.7263,
+      "false_positive_rate": 0.1585,
+      "confusion_matrix": {
+        "tn": 1035,
+        "fp": 195,
+        "fn": 7,
+        "tp": 268
+      },
+      "support": {
+        "normal": 1230,
+        "suspicious": 275
+      },
+      "roc_auc": 0.9682
+    }
+  },
+  "ids_detectors": {
+    "Rule engine only": {
+      "accuracy": 0.9588,
+      "precision": 0.9144,
+      "recall": 0.8545,
+      "f1": 0.8835,
+      "false_positive_rate": 0.0179,
+      "confusion_matrix": {
+        "tn": 1208,
+        "fp": 22,
+        "fn": 40,
+        "tp": 235
+      },
+      "support": {
+        "normal": 1230,
+        "suspicious": 275
+      }
+    },
+    "Anomaly detector only (score>=50)": {
+      "accuracy": 0.9203,
+      "precision": 0.8571,
+      "recall": 0.6764,
+      "f1": 0.7561,
+      "false_positive_rate": 0.0252,
+      "confusion_matrix": {
+        "tn": 1199,
+        "fp": 31,
+        "fn": 89,
+        "tp": 186
+      },
+      "support": {
+        "normal": 1230,
+        "suspicious": 275
+      }
+    },
+    "Hybrid: rules + anomaly": {
+      "accuracy": 0.9628,
+      "precision": 0.8476,
+      "recall": 0.9709,
+      "f1": 0.9051,
+      "false_positive_rate": 0.039,
+      "confusion_matrix": {
+        "tn": 1182,
+        "fp": 48,
+        "fn": 8,
+        "tp": 267
+      },
+      "support": {
+        "normal": 1230,
+        "suspicious": 275
+      }
+    },
+    "Hybrid: rules + anomaly + ML": {
+      "accuracy": 0.9668,
+      "precision": 0.8483,
+      "recall": 0.9964,
+      "f1": 0.9164,
+      "false_positive_rate": 0.0398,
+      "confusion_matrix": {
+        "tn": 1181,
+        "fp": 49,
+        "fn": 1,
+        "tp": 274
+      },
+      "support": {
+        "normal": 1230,
+        "suspicious": 275
+      }
+    }
+  },
+  "hybrid_per_scenario": {
+    "NORMAL_WEB": {
+      "total": 565,
+      "flagged": 23,
+      "label": "NORMAL"
+    },
+    "HIGH_CONNECTION_RATE": {
+      "total": 48,
+      "flagged": 48,
+      "label": "SUSPICIOUS"
+    },
+    "NORMAL_DATABASE": {
+      "total": 149,
+      "flagged": 1,
+      "label": "NORMAL"
+    },
+    "NORMAL_EMAIL": {
+      "total": 88,
+      "flagged": 0,
+      "label": "NORMAL"
+    },
+    "UNUSUAL_PORT_ACTIVITY": {
+      "total": 52,
+      "flagged": 52,
+      "label": "SUSPICIOUS"
+    },
+    "NORMAL_SSH": {
+      "total": 85,
+      "flagged": 0,
+      "label": "NORMAL"
+    },
+    "HIGH_TRAFFIC_VOLUME": {
+      "total": 28,
+      "flagged": 27,
+      "label": "SUSPICIOUS"
+    },
+    "REPEATED_FAILED_CONNECTIONS": {
+      "total": 45,
+      "flagged": 45,
+      "label": "SUSPICIOUS"
+    },
+    "NORMAL_DNS": {
+      "total": 316,
+      "flagged": 3,
+      "label": "NORMAL"
+    },
+    "NORMAL_BULK_TRANSFER": {
+      "total": 27,
+      "flagged": 22,
+      "label": "NORMAL"
+    },
+    "MULTI_PORT_PROBING_PATTERN": {
+      "total": 73,
+      "flagged": 73,
+      "label": "SUSPICIOUS"
+    },
+    "SYN_HEAVY_PATTERN": {
+      "total": 29,
+      "flagged": 29,
+      "label": "SUSPICIOUS"
+    }
+  },
+  "random_forest_feature_importance": {
+    "failed_connection_count": 0.1841,
+    "bytes_per_second": 0.1502,
+    "average_packet_size": 0.1453,
+    "packets_per_second": 0.1023,
+    "rst_count": 0.0983,
+    "duration": 0.0826,
+    "byte_count": 0.0697,
+    "packet_count": 0.0674,
+    "syn_count": 0.0668,
+    "connection_count": 0.0334
+  }
+}

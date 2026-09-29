@@ -1,0 +1,21 @@
+{
+  "trained_at": "2026-09-29 04:40 UTC",
+  "rows": 6019,
+  "suspicious_rows": 1099,
+  "test_rows": 1505,
+  "test_size": 0.25,
+  "baseline_samples": 3690,
+  "features": [
+    "packet_count",
+    "byte_count",
+    "duration",
+    "bytes_per_second",
+    "packets_per_second",
+    "connection_count",
+    "failed_connection_count",
+    "syn_count",
+    "rst_count",
+    "average_packet_size"
+  ],
+  "sklearn_version": "1.9.1"
+}
